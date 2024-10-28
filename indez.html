@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Rocky and Baloo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9e2e2; /* Rosa pastel */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: #ffb3b3; /* Rosa más oscuro */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff4d4d; /* Rosa más oscuro */
+        }
+
+        .servicio, .precio, .ubicacion {
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 5px solid #ff4d4d;
+        }
+
+        .ubicacion img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e63939; /* Rosa más oscura al hacer hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #ff4d4d;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .video-container video {
+            width: 70%;
+            max-width: 600px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="Logo Veterinaria" class="logo">
+        <h1>Veterinaria Rocky and Baloo</h1>
+        <p>Cuidamos de tus mascotas con amor y profesionalismo.</p>
+    </header>
+
+    <!-- Registro de Cliente y Mascota -->
+    <section id="registro">
+        <h2>Registro de Cliente y Mascota</h2>
+        <form id="registroForm">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" name="nombreCliente" required>
+
+            <label for="telefonoCliente">Teléfono del Cliente:</label>
+            <input type="tel" id="telefonoCliente" name="telefonoCliente" required>
+
+            <label for="nombreMascota">Nombre de la Mascota:</label>
+            <input type="text" id="nombreMascota" name="nombreMascota" required>
+
+            <label for="tipoMascota">Tipo de Mascota:</label>
+            <select id="tipoMascota" name="tipoMascota" required>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="edadMascota">Edad de la Mascota:</label>
+            <input type="number" id="edadMascota" name="edadMascota" required>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </section>
+
+    <!-- Servicios Veterinarios -->
+    <section id="servicios">
+        <h2>Servicios Veterinarios</h2>
+        <article class="servicio">
+            <h3>Consulta General</h3>
+            <p>Evaluación completa de la salud de tu mascota.</p>
+            <img src="consul.jpg" alt="Consulta General" style="width:40%; border-radius: 5px;">
+        </article>
+        <article class="servicio">
+            <h3>Vacunación</h3>
+            <p>Vacunas necesarias para mantener a tu mascota saludable.</p>
+            <img src="vac.jpg" alt="Vacunación" style="width:40%; border-radius: 5px;">
+        </article>
+        <article class="servicio">
+            <h3>Baño y Cuidado</h3>
+            <p>Servicios de limpieza y estética para tu mascota.</p>
+            <img src="rock.jpg" alt="Baño y Cuidado" style="width:40%; border-radius: 5px;">
+        </article>
+        <article class="servicio">
+            <h3>Esterilización</h3>
+            <p>Servicio de esterilización para tu mascota, ya sea perro, gato u otro, realizadas por profesionales.</p>
+            <img src="esterilizacion.jpg" alt="Esterilización" style="width:40%; border-radius: 5px;">
+        </article>
+    </section>
+
+    <!-- Precios de Servicios -->
+    <section id="precios">
+        <h2>Precios de Servicios</h2>
+        <article class="precio">
+            <h3>Consulta General</h3>
+            <p>Precio: $500</p>
+        </article>
+        <article class="precio">
+            <h3>Vacunación</h3>
+            <p>Precio: $300</p>
+        </article>
+        <article class="precio">
+            <h3>Baño y Cuidado</h3>
+            <p>Precio: $250</p>
+        </article>
+        <article class="precio">
+            <h3>Cirugías</h3>
+            <p>Precio: $2000</p>
+        </article>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion">
+        <h2>Ubicación</h2>
+        <h3>Veterinaria Mascotas Aztekan</h3>
+        <p>Dirección: Aztekan Hospital Veterinario Roma</p>
+        <p>Teléfono: +52 (55) 1334 4445</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.9765905747718!2d-99.1624291!3d19.413417400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffdf94eb73d5%3A0xca665b7b0259489f!2sAztekan%20Hospital%20Veterinario%20Roma!5e0!3m2!1ses-419!2smx!4v1730148421246!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p>Síguenos en nuestras páginas</p>
+        <a href="https://www.instagram.com/azte_kan/">
+            <img src="ig.jpg" alt="Instagram" style="width: 50px; margin-right: 10px;">
+        </a>
+        <a href="https://www.facebook.com/AztekanCDMX">
+            <img src="fnb.jpg" alt="Facebook" style="width: 50px;">
+        </a>
+    </section>
+
+    <!-- Videos Informativos -->
+    <section class="video-container">
+        <h2>Videos Informativos</h2>
+        <video controls>
+            <source src="vet.mp4.mp4" type="video/mp4">
+            <p>¡Mira cómo cuidamos a tus mascotas!</p>
+        </video>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Veterinaria Rocky and Baloo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registroForm').onsubmit = function(event) {
+            event.preventDefault(); 
+            alert('Registro exitoso!'); 
+        };
+    </script>
+</body>
+</html>
